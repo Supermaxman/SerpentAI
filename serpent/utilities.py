@@ -5,9 +5,6 @@ import time
 
 import enum
 
-from serpent.config import config
-
-
 class SerpentError(BaseException):
     pass
 
@@ -94,6 +91,7 @@ def display_serpent_logo():
 
 
 def wait_for_crossbar():
+    from serpent.config import config
     while True:
         s = socket.socket()
 
